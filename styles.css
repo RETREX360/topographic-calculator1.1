@@ -1,18 +1,88 @@
-/* Add this to your existing CSS */
-section {
-  margin-bottom: 2rem;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-h2 {
+/* Header Styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 100px; /* Adjust the size of your logo */
+  height: auto;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.red-text {
+  color: #ff4d4d; /* Red color for "Goodal" */
+}
+
+/* Main Content Styles */
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.tool-section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tool-section h2 {
+  margin-top: 0;
   color: #333;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #ff4d4d;
   padding-bottom: 0.5rem;
+}
+
+.tool-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 label {
   font-weight: bold;
 }
 
+input, select, button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #ff4d4d;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #e60000;
+}
+
 input[readonly] {
   background-color: #f9f9f9;
+  cursor: not-allowed;
 }
