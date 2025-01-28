@@ -1,0 +1,42 @@
+// Conversion factors
+const conversionFactors = {
+  meters: {
+    feet: 3.28084,
+    kilometers: 0.001,
+    miles: 0.000621371,
+  },
+  feet: {
+    meters: 0.3048,
+    kilometers: 0.0003048,
+    miles: 0.000189394,
+  },
+  kilometers: {
+    meters: 1000,
+    feet: 3280.84,
+    miles: 0.621371,
+  },
+  miles: {
+    meters: 1609.34,
+    feet: 5280,
+    kilometers: 1.60934,
+  },
+};
+
+function convertUnits() {
+  const inputValue = parseFloat(document.getElementById('inputValue').value);
+  const fromUnit = document.getElementById('fromUnit').value;
+  const toUnit = document.getElementById('toUnit').value;
+
+  if (isNaN(inputValue)) {
+    alert('Please enter a valid number.');
+    return;
+  }
+
+  if (fromUnit === toUnit) {
+    document.getElementById('result').value = inputValue;
+    return;
+  }
+
+  const result = inputValue * conversionFactors[fromUnit][toUnit];
+  document.getElementById('result').value = result.toFixed(4);
+}
