@@ -12,54 +12,86 @@
   </header>
 
   <main>
-    <!-- Section 1: Unit Converter -->
-    <section id="unit-converter">
-      <h2>Unit Converter</h2>
+    <!-- Section 1: Angle Conversion -->
+    <section id="angle-conversion">
+      <h2>Angle Conversion</h2>
       <div>
-        <label for="inputValue">Enter Value:</label>
-        <input type="number" id="inputValue" placeholder="Enter value">
+        <label for="angleValue">Enter Angle:</label>
+        <input type="number" id="angleValue" placeholder="Enter angle">
       </div>
       <div>
-        <label for="fromUnit">From:</label>
-        <select id="fromUnit">
-          <option value="meters">Meters</option>
+        <label for="angleFromUnit">From:</label>
+        <select id="angleFromUnit">
+          <option value="degrees">Degrees</option>
+          <option value="grads">Grads</option>
+          <option value="gons">Gons</option>
+        </select>
+      </div>
+      <div>
+        <label for="angleToUnit">To:</label>
+        <select id="angleToUnit">
+          <option value="degrees">Degrees</option>
+          <option value="grads">Grads</option>
+          <option value="gons">Gons</option>
+        </select>
+      </div>
+      <button onclick="convertAngle()">Convert</button>
+      <div>
+        <label for="angleResult">Result:</label>
+        <input type="text" id="angleResult" readonly>
+      </div>
+    </section>
+
+    <!-- Section 2: Distance Conversion -->
+    <section id="distance-conversion">
+      <h2>Distance Conversion</h2>
+      <div>
+        <label for="distanceValue">Enter Distance:</label>
+        <input type="number" id="distanceValue" placeholder="Enter distance">
+      </div>
+      <div>
+        <label for="distanceFromUnit">From:</label>
+        <select id="distanceFromUnit">
           <option value="feet">Feet</option>
-          <option value="kilometers">Kilometers</option>
+          <option value="meters">Meters</option>
           <option value="miles">Miles</option>
         </select>
       </div>
       <div>
-        <label for="toUnit">To:</label>
-        <select id="toUnit">
-          <option value="meters">Meters</option>
+        <label for="distanceToUnit">To:</label>
+        <select id="distanceToUnit">
           <option value="feet">Feet</option>
-          <option value="kilometers">Kilometers</option>
+          <option value="meters">Meters</option>
           <option value="miles">Miles</option>
         </select>
       </div>
-      <button onclick="convertUnits()">Convert</button>
+      <button onclick="convertDistance()">Convert</button>
       <div>
-        <label for="result">Result:</label>
-        <input type="text" id="result" readonly>
+        <label for="distanceResult">Result:</label>
+        <input type="text" id="distanceResult" readonly>
       </div>
     </section>
 
-    <!-- Section 2: Slope Calculator -->
-    <section id="slope-calculator">
-      <h2>Slope Calculator</h2>
-      <!-- Add slope calculation fields here -->
-    </section>
-
-    <!-- Section 3: Elevation Difference -->
-    <section id="elevation-difference">
-      <h2>Elevation Difference</h2>
-      <!-- Add elevation difference fields here -->
-    </section>
-
-    <!-- Section 4: Area Calculation -->
-    <section id="area-calculation">
-      <h2>Area Calculation</h2>
-      <!-- Add area calculation fields here -->
+    <!-- Section 3: Trigonometric Functions -->
+    <section id="trig-functions">
+      <h2>Trigonometric Functions</h2>
+      <div>
+        <label for="trigAngle">Enter Angle (in degrees):</label>
+        <input type="number" id="trigAngle" placeholder="Enter angle">
+      </div>
+      <button onclick="calculateTrig()">Calculate</button>
+      <div>
+        <label for="sineResult">Sine:</label>
+        <input type="text" id="sineResult" readonly>
+      </div>
+      <div>
+        <label for="cosineResult">Cosine:</label>
+        <input type="text" id="cosineResult" readonly>
+      </div>
+      <div>
+        <label for="tangentResult">Tangent:</label>
+        <input type="text" id="tangentResult" readonly>
+      </div>
     </section>
   </main>
 
