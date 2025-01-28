@@ -1,95 +1,146 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topographic Calculator</title>
+  <title>Geodeal Conversion Services</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header Section -->
   <header>
-    <h1>Topographic Calculator</h1>
+    <div class="logo-container">
+      <!-- Add your logo here (replace 'logo.png' with your logo file) -->
+      <img src="logo.png" alt="Geodeal Logo" class="logo">
+    </div>
+    <h1 class="page-title">Goodal <span class="red-text">Conversion Services</span></h1>
   </header>
 
+  <!-- Main Content -->
   <main>
     <!-- Section 1: Angle Conversion -->
-    <section id="angle-conversion">
+    <section class="tool-section">
       <h2>Angle Conversion</h2>
-      <div>
-        <label for="angleValue">Enter Angle:</label>
-        <input type="number" id="angleValue" placeholder="Enter angle">
-      </div>
-      <div>
-        <label for="angleFromUnit">From:</label>
-        <select id="angleFromUnit">
-          <option value="degrees">Degrees</option>
-          <option value="grads">Grads</option>
-          <option value="gons">Gons</option>
-        </select>
-      </div>
-      <div>
-        <label for="angleToUnit">To:</label>
-        <select id="angleToUnit">
-          <option value="degrees">Degrees</option>
-          <option value="grads">Grads</option>
-          <option value="gons">Gons</option>
-        </select>
-      </div>
-      <button onclick="convertAngle()">Convert</button>
-      <div>
-        <label for="angleResult">Result:</label>
-        <input type="text" id="angleResult" readonly>
+      <div class="tool-content">
+        <!-- Add your angle conversion tool here -->
+        <div>
+          <label for="angleValue">Enter Angle:</label>
+          <input type="number" id="angleValue" placeholder="Enter angle">
+        </div>
+        <div>
+          <label for="angleFromUnit">From:</label>
+          <select id="angleFromUnit">
+            <option value="degrees">Degrees</option>
+            <option value="grads">Grads</option>
+            <option value="gons">Gons</option>
+          </select>
+        </div>
+        <div>
+          <label for="angleToUnit">To:</label>
+          <select id="angleToUnit">
+            <option value="degrees">Degrees</option>
+            <option value="grads">Grads</option>
+            <option value="gons">Gons</option>
+          </select>
+        </div>
+        <button onclick="convertAngle()">Convert</button>
+        <div>
+          <label for="angleResult">Result:</label>
+          <input type="text" id="angleResult" readonly>
+        </div>
       </div>
     </section>
 
     <!-- Section 2: Distance Conversion -->
-    <section id="distance-conversion">
+    <section class="tool-section">
       <h2>Distance Conversion</h2>
-      <div>
-        <label for="distanceValue">Enter Distance:</label>
-        <input type="number" id="distanceValue" placeholder="Enter distance">
-      </div>
-      <div>
-        <label for="distanceFromUnit">From:</label>
-        <select id="distanceFromUnit">
-          <option value="feet">Feet</option>
-          <option value="meters">Meters</option>
-          <option value="miles">Miles</option>
-        </select>
-      </div>
-      <div>
-        <label for="distanceToUnit">To:</label>
-        <select id="distanceToUnit">
-          <option value="feet">Feet</option>
-          <option value="meters">Meters</option>
-          <option value="miles">Miles</option>
-        </select>
-      </div>
-      <button onclick="convertDistance()">Convert</button>
-      <div>
-        <label for="distanceResult">Result:</label>
-        <input type="text" id="distanceResult" readonly>
+      <div class="tool-content">
+        <!-- Add your distance conversion tool here -->
+        <div>
+          <label for="distanceValue">Enter Distance:</label>
+          <input type="number" id="distanceValue" placeholder="Enter distance">
+        </div>
+        <div>
+          <label for="distanceFromUnit">From:</label>
+          <select id="distanceFromUnit">
+            <option value="feet">Feet</option>
+            <option value="meters">Meters</option>
+            <option value="miles">Miles</option>
+          </select>
+        </div>
+        <div>
+          <label for="distanceToUnit">To:</label>
+          <select id="distanceToUnit">
+            <option value="feet">Feet</option>
+            <option value="meters">Meters</option>
+            <option value="miles">Miles</option>
+          </select>
+        </div>
+        <button onclick="convertDistance()">Convert</button>
+        <div>
+          <label for="distanceResult">Result:</label>
+          <input type="text" id="distanceResult" readonly>
+        </div>
       </div>
     </section>
 
     <!-- Section 3: Trigonometric Functions -->
-    <section id="trig-functions">
+    <section class="tool-section">
       <h2>Trigonometric Functions</h2>
-      <div>
-        <label for="trigAngle">Enter Angle (in degrees):</label>
-        <input type="number" id="trigAngle" placeholder="Enter angle">
+      <div class="tool-content">
+        <!-- Add your trigonometric functions tool here -->
+        <div>
+          <label for="trigAngle">Enter Angle (in degrees):</label>
+          <input type="number" id="trigAngle" placeholder="Enter angle">
+        </div>
+        <button onclick="calculateTrig()">Calculate</button>
+        <div>
+          <label for="sineResult">Sine:</label>
+          <input type="text" id="sineResult" readonly>
+        </div>
+        <div>
+          <label for="cosineResult">Cosine:</label>
+          <input type="text" id="cosineResult" readonly>
+        </div>
+        <div>
+          <label for="tangentResult">Tangent:</label>
+          <input type="text" id="tangentResult" readonly>
+        </div>
       </div>
-      <button onclick="calculateTrig()">Calculate</button>
-      <div>
-        <label for="sineResult">Sine:</label>
-        <input type="text" id="sineResult" readonly>
-      </div>
-      <div>
-        <label for="cosineResult">Cosine:</label>
-        <input type="text" id="cosineResult" readonly>
-      </div>
-      <div>
-        <label for="tangentResult">Tangent:</label>
-        <input type="text" id="tangentResult" readonly>
+    </section>
+
+    <!-- Section 4: Unit Conversion (Example) -->
+    <section class="tool-section">
+      <h2>Unit Conversion</h2>
+      <div class="tool-content">
+        <!-- Add your unit conversion tool here -->
+        <div>
+          <label for="inputValue">Enter Value:</label>
+          <input type="number" id="inputValue" placeholder="Enter value">
+        </div>
+        <div>
+          <label for="fromUnit">From:</label>
+          <select id="fromUnit">
+            <option value="meters">Meters</option>
+            <option value="feet">Feet</option>
+            <option value="kilometers">Kilometers</option>
+            <option value="miles">Miles</option>
+          </select>
+        </div>
+        <div>
+          <label for="toUnit">To:</label>
+          <select id="toUnit">
+            <option value="meters">Meters</option>
+            <option value="feet">Feet</option>
+            <option value="kilometers">Kilometers</option>
+            <option value="miles">Miles</option>
+          </select>
+        </div>
+        <button onclick="convertUnits()">Convert</button>
+        <div>
+          <label for="result">Result:</label>
+          <input type="text" id="result" readonly>
+        </div>
       </div>
     </section>
   </main>
